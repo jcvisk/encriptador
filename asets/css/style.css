@@ -1,0 +1,126 @@
+:root{
+    --blue: #0A3871;
+    --gray: #D8DFE8;
+    --light: #f3f5fc;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/static/Inter-Regular.ttf');
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    background-color: var(--light);
+}
+.navbar {
+    padding: 1rem .5rem;
+}
+.navbar img {
+    width: 9%;
+    height: auto;
+}
+
+.container {
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+.container__input {
+    padding: 1.5rem 1rem;
+}
+
+.button {
+    display: block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 1rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 50px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-gray {
+    color: var(--blue);
+    background-color: var(--gray);
+    border-color: var(--blue);
+}
+
+.container__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.container__buttons button{
+    width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 66.66% 33.33%;
+    gap: 1rem;
+}
+
+@media (max-width: 767px) {
+    .row {
+        grid-template-columns: 100%;
+    }
+}
+
+.textarea {
+    width: 100%;
+    border: none;
+    font-size: 1.7rem;
+    color: var(--blue);
+}
+
+.container__output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--light) !important;
+}
+
+.output {
+    font-size: 1.2rem;
+}
+
+.border__rounded{
+    border-radius: 50px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 1.5rem 1rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
