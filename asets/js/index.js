@@ -111,4 +111,9 @@ const desencriptador = (texto) => {
     return desencriptado;
 }
 
+(()=>{
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear()
+})();
+
 })();
