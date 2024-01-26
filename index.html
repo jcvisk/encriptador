@@ -7,6 +7,7 @@
     <title>Encriptador</title>
     <link rel="shortcut icon" href="./asets/img/logo.png" type="image/x-icon">
 
+    <script src="https://kit.fontawesome.com/28b14749ec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./asets/css/style.css">
 </head>
 
@@ -20,26 +21,38 @@
         <div class="row">
             <div class="col container__input">
                 <form action="">
-                    <textarea class="textarea" name="input" id="input" rows="20"></textarea>
-                    <div class="container__buttons">
-                        <button type="button" class="button btn-blue">Encriptar</button>
-                        <button type="button" class="button btn-gray">Desencriptar</button>
+                    <textarea class="textarea" name="input" id="input"></textarea>
+                    <div>
+                        <div class="container__mensajes">
+                            <p class="color-gray"><i class="fas fa-exclamation-circle"></i> Solo letras minúsculas y sin acentos</p>
+                            <p class="color-red" id="mensajes"></p>
+                        </div>
+                        <div class="container__buttons">
+                            <button type="button" id="encriptarBtn" class="button btn-blue">Encriptar</button>
+                            <button type="button" id="desencriptarBtn" class="button btn-gray">Desencriptar</button>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="col container__output border__rounded">
-                <div>
-                    <p class="output">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorum dolorem ipsam
-                        ex tenetur molestiae quidem, magnam, cum nesciunt doloremque hic soluta quod necessitatibus
-                        autem? A sed eius amet repudiandae?</p>
+                <div class="scroll">
+                    <p class="output" id="output"></p>
                 </div>
                 <div class="text-center">
-                    <img src="./asets/img/munieco.png" alt="munieco" class="img-fluid">
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    <div id="invalidText" class="">
+                        <img src="./asets/img/munieco.png" alt="munieco" class="img-fluid">
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
                 </div>
-                <div class="container__buttons">
-                    <button type="button" class="button btn-gray">Copiar</button>
+                <div>
+                    <div class="container__mensajes">
+                        <p class="color-red d-none" id="errorCopiar"><i class="fas fa-exclamation-circle"></i> Error al copiar!</p>
+                        <p class="color-gray d-none" id="msjCopiado"><i class="far fa-copy"></i> Copiado correctamente!</p>
+                    </div>
+                    <div class="container__buttons">
+                        <button type="button" class="button btn-gray" id="copiar">Copiar</button>
+                    </div>
                 </div>
             </div>
         </div>
